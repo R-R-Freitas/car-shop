@@ -9,7 +9,7 @@ const errorHandler: ErrorRequestHandler = (
   _next,
 ) => {
   if (err instanceof ZodError) {
-    return res.status(400).json({ message: err.issues });
+    return res.status(400).json({ error: err.issues });
   }
 
   const messageAsErrorType = err.message as keyof typeof ErrorTypes;
@@ -17,9 +17,9 @@ const errorHandler: ErrorRequestHandler = (
 
   if (mappedError) {
     const { httpStatus, message } = mappedError;
-    return res.status(httpStatus).json({ message });
+    return res.status(httpStatus).json({ error: message });
   }
-  return res.status(500).json({ message: err.message });
+  return res.status(500).json({ error: err.message });
 };
 
 export default errorHandler;

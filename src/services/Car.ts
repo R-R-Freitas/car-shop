@@ -3,7 +3,7 @@ import { ICar, CarZodSchema } from '../interfaces/ICar';
 import { IModel } from '../interfaces/IModel';
 import { ErrorTypes } from '../errors/catalog';
 
-class CarSevice implements IService<ICar> {
+class CarService implements IService<ICar> {
   private _car: IModel<ICar>;
   constructor(model: IModel<ICar>) {
     this._car = model;
@@ -40,4 +40,4 @@ class CarSevice implements IService<ICar> {
   }
 }
 
-export default CarSevice;
+export default CarService;

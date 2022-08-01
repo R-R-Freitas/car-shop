@@ -91,7 +91,7 @@ describe('Car Service', () => {
 			}
     });
 
-    describe('deleting a car', async () => {
+    describe('Deleting a car', async () => {
       it('Deletion successful', async () => {
         const deletedCar = await carService.delete(carId);
         expect(deletedCar).to.be.deep.equal(carMockAfterUpdate);

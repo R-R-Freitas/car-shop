@@ -10,6 +10,9 @@ const carMongooseSchema = new Schema<ICar>({
   buyValue: Number,
   doorsQty: Number,
   seatsQty: Number,
+}, {
+  // source: https://stackoverflow.com/questions/13699784/mongoose-v-property-hide
+  versionKey: false,
 });
 
 class Car extends MongoModel<ICar> {

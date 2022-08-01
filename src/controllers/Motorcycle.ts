@@ -5,7 +5,8 @@ import { IMotorcycle } from '../interfaces/IMotorcycle';
 export default class MotorcycleController {
   constructor(private _service: IService<IMotorcycle>) {}
 
-  public async create(req: Request & { body: IMotorcycle },
+  public async create(
+    req: Request & { body: IMotorcycle },
     res: Response<IMotorcycle>,
   ) {
     const { body: motorcycle } = req;

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { NextFunction, Request, Response } from 'express';
-import { carId, carMock, carMockWithId } from '../../mocks/carMock';
+import { carId, carMock, carMockAfterUpdate, carMockForUpdate, carMockWithId } from '../../mocks/carMock';
 import CarController from '../../../controllers/Car';
 import CarService from '../../../services/Car';
 import CarModel from '../../../models/Car';
@@ -21,7 +21,9 @@ describe('Car Controller', () => {
     .onCall(0).resolves([carMockWithId])
     .onCall(1).resolves([]);
     sinon.stub(carService, 'readOne').resolves(carMockWithId);
-    
+    sinon.stub(carService, 'update').resolves(carMockAfterUpdate);
+
+
     res.status = sinon.stub().returns(res);
     res.json = sinon.stub().returns(res);
   });
@@ -54,11 +56,20 @@ describe('Car Controller', () => {
 
   describe('searching a car', async () => {
     it ('search successful', async () => {
-      req.params = { id: carId }
+      req.params = { id: carId };
       await carController.readOne(req, res);
       expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
       expect((res.json as sinon.SinonStub).calledWith(carMockWithId)).to.be.true;
     });
   });
 
+  describe('updating a car', async () => {
+    it('update successful', async () => {
+      req.params = { id: carId };
+      req.body = carMockForUpdate;
+      await carController.update(req, res);
+      expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
+      expect((res.json as sinon.SinonStub).calledWith(carMockAfterUpdate)).to.be.true;
+    });
+  });
 }); 

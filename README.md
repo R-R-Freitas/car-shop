@@ -1,13 +1,3 @@
-# 🚧 README em construção 🚧
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
   
 ### Este é um projeto desenvolvido para o curso de desenvolvimento web full-stack da Trybe, módulo back-end.  
   
@@ -17,7 +7,7 @@ A aplicação é uma API para gerenciar uma concessionária de veículos.
 
 Foi utilizada Programação Orientada a Objetos (POO), buscando seguir os princípios S.O.L.I.D. e Test Driven Development(TDD)  
   
-Tecnologias utilizadas:  
+## Tecnologias utilizadas:  
 <details>  
   <summary>Clique para expandir</summary>  
   
@@ -29,6 +19,8 @@ Tecnologias utilizadas:
 * zod;  
 
 </details>  
+  
+## Rodando aaplicação
   
 Você pode rodar a aplicação na sua máquina através do terminal, na pasta onde será instalada:  
 <details>  

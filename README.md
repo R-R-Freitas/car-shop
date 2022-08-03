@@ -20,7 +20,7 @@ Foi utilizada Programação Orientada a Objetos (POO), buscando seguir os princ�
 
 </details>  
   
-## Rodando aaplicação
+## Rodando a aplicação
   
 Você pode rodar a aplicação na sua máquina através do terminal, na pasta onde será instalada:  
 <details>  

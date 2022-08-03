@@ -15,7 +15,7 @@ Foi utilizada Programação Orientada a Objetos (POO), buscando seguir os princ�
 * MongoDB;  
 * Mongoose;  
 * Express;  
-* Sinon
+* Sinon;
 * zod;  
 
 </details>  
@@ -24,7 +24,8 @@ Foi utilizada Programação Orientada a Objetos (POO), buscando seguir os princ�
   
 <details>  
   <summary>Clique para expandir</summary>
-Você pode rodar a aplicação na sua máquina através do terminal, na pasta onde será instalada:  
+  Você pode rodar a aplicação na sua máquina através do terminal, na pasta onde será instalada:  
+  
 ```
 git clone git@github.com:R-R-Freitas/car-shop.git
 cd car-shop

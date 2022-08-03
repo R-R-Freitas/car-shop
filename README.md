@@ -22,19 +22,19 @@ Foi utilizada Programação Orientada a Objetos (POO), buscando seguir os princ�
   
 ## Rodando a aplicação
   
-Você pode rodar a aplicação na sua máquina através do terminal, na pasta onde será instalada:  
 <details>  
-  <summary>Clique para expandir</summary>  
+  <summary>Clique para expandir</summary>
+Você pode rodar a aplicação na sua máquina através do terminal, na pasta onde será instalada:  
 ```
-git clone git@github.com:R-R-Freitas/car-shop.git  
-cd car-shop  
-docker-compose up -d  
-```  
+git clone git@github.com:R-R-Freitas/car-shop.git
+cd car-shop
+docker-compose up -d
+```
 Ou se preferir não usar docker (necessário ter o mongoDB instalado localmente):  
 ```
-git clone git@github.com:R-R-Freitas/car-shop.git  
-cd car-shop  
-npm install  
-npm run dev  
-```  
+git clone git@github.com:R-R-Freitas/car-shop.git
+cd car-shop
+npm install
+npm run dev
+```
 </details>

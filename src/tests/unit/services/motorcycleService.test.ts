@@ -14,18 +14,31 @@ describe('Motorcycle Service', () => {
 	const motorcycleService = new MotorcycleService(motorcycleModel);
 
 	before(() => {
+		/*
+			pt-br:
+				O método sinon.stub().resolves() substitui um método
+				passado como parâmetro no stub e retorna o parâmetro
+				de resolves. onCall() permite parâmetros diferentes no
+				resolves a cada chamada do método substituido.
+			en:
+				The method sinon.stub().resolves() replaces a method
+				passed as parameter to stub and returns the parameter
+				in resolves. onCall() allows different parameters to
+				resolves each time the replaced method is called.
+		*/
+
 		sinon.stub(motorcycleModel, 'create').resolves(motorcycleMockWithId);
     sinon.stub(motorcycleModel, 'read').resolves([motorcycleMockWithId]);
 		sinon.stub(motorcycleModel, 'readOne')
     .onCall(0).resolves(motorcycleMockWithId) 
-    .onCall(1).resolves(null)
+    .onCall(1).resolves(null);
 		sinon.stub(motorcycleModel, 'update')
     .onCall(0).resolves(motorcycleMockAfterUpdate)
     .onCall(1).resolves(null)
     .onCall(2).resolves(motorcycleMockAfterUpdate);
     sinon.stub(motorcycleModel, 'delete')
     .onCall(0).resolves(motorcycleMockAfterUpdate)
-    .onCall(1).resolves(null)
+    .onCall(1).resolves(null);
 	});
 
 	after(() => {
